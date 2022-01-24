@@ -19,15 +19,12 @@ app.set('layout extractStyles', true)
 app.use(expressLayout);
 
 app.use('/css', express.static(path.resolve('node_modules/bootstrap/dist/css')))
+app.use('/css', express.static(path.resolve('node_modules/normalize.css')))
 app.use('/js', express.static(path.resolve('node_modules/bootstrap/dist/js')))
+app.use('/img', express.static(path.resolve('dist')))
 
-app.get('/', (req, res)=>{
-    res.locals = {
-        title: 'Example',
-        message: 'This is a message'
-      };
-    res.render('pages/index');
-})
+import { routes } from "./routes.js";
+app.use(routes);
 
 const port = process.env.PORT || 8000;
 const host = process.env.HOST || '';

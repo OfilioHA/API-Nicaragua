@@ -1,0 +1,17 @@
+[
+    {
+        "id": 0,
+        "nombre": "León",
+        "cabecera": 0,
+        "municipios": [
+            {
+                "id": 0,
+                "nombre": "León"
+            },
+            {
+                "id": 1,
+                "nombre": "Telica"
+            }
+        ]
+    }
+]
